@@ -3,7 +3,6 @@
 import argparse
 import logging
 import time
-import string
 import serial
 import hexdump
 import colorama
@@ -29,6 +28,7 @@ Control Instructions:
 Read Instructions:
     read_input_bits		query the input bits and print the response
     read_output_bits	query the output bits and print the response
+    read_tags           get the friendly names of tags on the device
 
 Debug Instructions:
     enter_debug		put the device into debug mode for testing
@@ -180,9 +180,11 @@ def main():
     numeric_level = getattr(logging, args.loglevel.upper(), logging.INFO)
     logging.basicConfig(format='%(levelname)s:%(message)s', level=numeric_level)
 
-    logging.info("Starting up")
+    logging.debug("Starting up")
 
     process_command(args.command)
+
+    logging.info("Done")
 
 
 if __name__ == "__main__":
