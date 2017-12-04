@@ -8,7 +8,7 @@ Inspired by: https://twitter.com/meeas
 
 
 ## Requirements
-hexdump: https://pypi.python.org/pypi/hexdump (pip install hexdump)
+hexdump: https://pypi.python.org/pypi/hexdump (`pip install hexdump`)
 
-colaram: https://pypi.python.org/pypi/colorama (pip install colorama)
+colaram: https://pypi.python.org/pypi/colorama (`pip install colorama`)
 
